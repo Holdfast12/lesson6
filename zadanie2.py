@@ -6,13 +6,13 @@
 '''
 
 def inputwrite(c, h, o):
-    """Функция принимающая значения C H O и записывающая их в файл Input.txt
+    """Функция, принимающая значения C H O и записывающая их в файл Input.txt
     """
     with open('Input.txt', 'w') as file:
         file.write(f'{c} {h} {o}')
 
 def inputread():
-    """Функция считывающая значения C H O из файла Input.txt и возвращающая их в виде списка
+    """Функция, считывающая значения C H O из файла Input.txt и возвращающая их в виде списка
     """
     with open('Input.txt', 'rb') as file:
         return(list(int(i) for i in file.read().split()))
@@ -44,7 +44,7 @@ while True:
         if c < 0 or h < 0 or o < 0:
             print('Должны быть введены 3 натуральных числа')
             continue
-        #записал список полученных чисел в Input.txt в виде байт-кода
+        #записал список полученных чисел в Input.txt
         inputwrite(c, h, o)
         #беру список чисел из Input.txt в переменную
         cho = inputread()
