@@ -14,7 +14,7 @@ def inputwrite(c, h, o):
 def inputread():
     """Функция, считывающая значения C H O из файла Input.txt и возвращающая их в виде списка
     """
-    with open('Input.txt', 'rb') as file:
+    with open('Input.txt', 'r') as file:
         return(list(int(i) for i in file.read().split()))
 
 def outputwrite(maxmol):
